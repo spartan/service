@@ -1,0 +1,51 @@
+{
+    "name": "spartan/service",
+    "description": "Spartan Service library",
+    "type": "library",
+    "keywords": [
+        "library",
+        "spartan",
+        "service"
+    ],
+    "homepage": "https://spartanphp.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iulian N.",
+            "email": "iulian@spartanphp.com",
+            "homepage": "https://spartanphp.com",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "support@spartanphp.com",
+        "docs": "https://docs.spartanphp.com"
+    },
+    "require": {
+        "php": ">=7.4",
+        "psr/container": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spartan\\Service\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spartan\\Service\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
