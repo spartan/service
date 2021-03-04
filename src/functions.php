@@ -1,17 +1,22 @@
 <?php
 
-/**
- * @param \Psr\Container\ContainerInterface|null $instance
- *
- * @return \Psr\Container\ContainerInterface|\Spartan\Service\Container
- */
-function container(Psr\Container\ContainerInterface $instance = null)
-{
-    static $container = null;
+use Psr\Container\ContainerInterface;
+use Spartan\Service\Container;
 
-    if ($instance) {
-        $container = $instance;
+if (!function_exists('container')) {
+    /**
+     * @param ContainerInterface|null $instance
+     *
+     * @return ContainerInterface|Container
+     */
+    function container(ContainerInterface $instance = null)
+    {
+        static $container = null;
+
+        if ($instance) {
+            $container = $instance;
+        }
+
+        return $container;
     }
-
-    return $container;
 }

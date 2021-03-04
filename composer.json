@@ -44,7 +44,14 @@
     "config": {
         "sort-packages": true
     },
-    "scripts": {
+    "extra": {
+        "spartan": {
+            "install": {
+                "commands": [
+                    "__DIR__ . '/../vendor/spartan/service/src/Command'"
+                ]
+            }
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
